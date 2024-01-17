@@ -6,7 +6,7 @@ package hoja04.ejercicio1;
 
 /**
  *
- * @author carme
+ * @author carmen
  */
 public class Ejercicio1 {
 
