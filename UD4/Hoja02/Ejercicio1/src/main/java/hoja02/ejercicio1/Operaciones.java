@@ -33,6 +33,7 @@ public void mostrar() {
         for (int i=0;i<num.length;i++){
             System.out.print(num[i]+" ");
         }System.out.print(" ");
+        
     }
 public int m2(){
     int suma=0;
