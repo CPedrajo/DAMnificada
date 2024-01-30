@@ -11,6 +11,10 @@ package hoja01.ejercicio1;
 public class Ejercicio1 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Pajaro p= new Pajaro();
+        Pajaro p2= new Pajaro(2,"Rojo");
+        Pajaro.muestraPajaro();
+        
+        
     }
 }
