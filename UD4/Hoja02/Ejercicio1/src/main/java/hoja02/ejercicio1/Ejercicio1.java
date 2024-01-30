@@ -2,19 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package hoja04.ejercicio1;
+package hoja02.ejercicio1;
 
 /**
  *
- * @author carmen
+ * @author carme
  */
 public class Ejercicio1 {
 
     public static void main(String[] args) {
+        Operaciones o =new Operaciones();
+      o.mostrar();
+       o.m1();
+       o.mostrar();
+        System.out.print(o.m2()+" "); 
         
-        Menu m = new Menu ();
-        m.m1();
-        m.m2();
-        m.m3();
+        
     }
 }
