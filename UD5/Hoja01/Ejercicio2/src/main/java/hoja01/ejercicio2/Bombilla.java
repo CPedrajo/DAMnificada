@@ -9,8 +9,10 @@ package hoja01.ejercicio2;
  * @author DAM112
  */
 public class Bombilla {
-    private Estado estadoBombilla= Estado.OFF;
-    private Estado estadoGeneral= Estado.OFF;
+   
+    private static Estado estadoGeneral= Estado.OFF;
+    private int interruptor; 
+public Bombilla (){
     
-    
+}
 }
