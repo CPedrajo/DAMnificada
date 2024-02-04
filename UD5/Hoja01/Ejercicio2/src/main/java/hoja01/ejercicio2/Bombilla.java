@@ -11,7 +11,7 @@ package hoja01.ejercicio2;
 public class Bombilla {
    
     private static Luces luces= Luces.OFF;
-    private static Luces bombilla;
+    private Luces bombilla;
     
 public Bombilla (){
    bombilla= Luces.ON; 
