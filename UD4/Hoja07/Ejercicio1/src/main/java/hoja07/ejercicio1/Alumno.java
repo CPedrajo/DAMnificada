@@ -56,6 +56,7 @@ public void getNotas() {
             } else {
                 System.out.print(" / " + notas[i]);
             }   
+          
         }
     }
 
