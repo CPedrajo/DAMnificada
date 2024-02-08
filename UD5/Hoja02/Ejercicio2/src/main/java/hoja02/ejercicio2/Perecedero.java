@@ -4,12 +4,14 @@
  */
 package hoja02.ejercicio2;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author carmen
  */
 public class Perecedero extends Articulo {
-    private int mes, año; 
+    private static int mes, año; 
 
     public Perecedero(int mes, int año, int codigo, double precio, String descripcion) {
         super(codigo, precio, descripcion);
@@ -17,16 +19,34 @@ public class Perecedero extends Articulo {
         this.año = año;
     }
 
-    @Override
-    public void datos() {
-        super.datos();
-        System.out.println("El mes es: "+mes);
-        System.out.println("El año es: "+año); 
+    public int getMes() {
+        return mes;
+    }
+
+    public int getAño() {
+        return año;
     }
     
-    public void codesc(){
+
+       @Override
+    public String toString() {
+        return super.toString().concat(String.format("Fecha De Caducidad: %d-%d\n", mes, año));
+    }
+    
+    public static void caducados(Articulo[] cad){
+        
+        for (int i=0; i<cad.length;i++){
+            if(cad[i] instanceof Perecedero &&(año<LocalDate.now().getYear() || (año==LocalDate.now().getYear()&& mes<LocalDate.now().getMonthValue()))){
+            
+                System.out.println(cad[i].toString());
+            
+                    }
+        }
         
     }
+
+    
+
    
         
         

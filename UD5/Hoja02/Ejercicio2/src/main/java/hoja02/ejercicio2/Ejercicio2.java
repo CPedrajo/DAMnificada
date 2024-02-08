@@ -11,17 +11,39 @@ package hoja02.ejercicio2;
 public class Ejercicio2 {
 
     public static void main(String[] args) {
-     Articulo [] ar= new Articulo[10]; 
-    for (int i=0; i<ar.length; i++){ // este recorre todo el array. Hace falta un contador para que solo muestre hasta donde hay datos. 
-       if(i<(ar.length/2)){ // i=0;i<contador;i++ 
-           ar[i]=new Perecedero(2,2024,55, 25.5, "hola");
-       } else{
-           ar[i]=new EnPromocion(5.5,55,24.5,"hola");
-       }
-    } 
-        for (Articulo ar1 : ar) {
-            ar1.datos();
-        }
+     Articulo [] articulos= new Articulo[10]; 
+     
+     articulos[0]= new Perecedero(1,2023,01,25.5,"comprado");
+     articulos[1]= new Perecedero(1,2023,02,25.5,"comprado");
+     articulos[2]= new Perecedero(2,2024,03,25.5,"comprado");
+     articulos[3]= new Perecedero(3,2024,04,25.5,"comprado");
+     articulos[4]= new Perecedero(1,2024,05,25.5,"comprado");
+     
+     articulos[5] = new EnPromocion (1.9,06,20,"compra"); 
+     articulos[6] = new EnPromocion (1.9,07,20,"compra"); 
+     articulos[7] = new EnPromocion (1.9,8,20,"compra"); 
+     articulos[8] = new EnPromocion (1.9,9,20,"compra"); 
+     articulos[9] = new EnPromocion (1.9,10,20,"compra"); 
+    
+     
+     
+    /* for (Articulo articulo : articulos){ 
+            System.out.println(articulo.toString());
+}
+     for (Articulo articulo : articulos){ 
+        System.out.println(Articulo.enProm(articulos));
+     }*/
+     
+      for (int i=0; i<articulos.length; i++){ 
+      if(articulos[i] instanceof Perecedero){
+          Perecedero.caducados(articulos);
+      }
+      }
+     
      
     }
+  
+    
+    
+    
 }

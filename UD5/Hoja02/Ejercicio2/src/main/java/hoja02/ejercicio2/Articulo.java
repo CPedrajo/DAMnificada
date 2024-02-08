@@ -4,6 +4,8 @@
  */
 package hoja02.ejercicio2;
 
+import static hoja02.ejercicio2.Articulo.enProm;
+
 /**
  *
  * @author carmen
@@ -18,11 +20,23 @@ public class Articulo {
         this.precio = precio;
         this.descripcion = descripcion;
     }
-   
-    public void datos(){        
-        System.out.println("El codigo es: "+codigo);
-        System.out.println("EL precio es: "+precio);
-        System.out.println("La descripcion es: "+descripcion);
+
+     @Override
+    public String toString() {
+        return String.format("Articulo: %s Descripcion: %s Precio: %,.2f€", codigo, descripcion, precio);
     }
+    
+    public static String enProm (Articulo[] lista1){
+        String cadena= "Articulos en promocion";
+        for (int i=0; i<lista1.length; i++){
+           if (lista1[i]instanceof EnPromocion){
+               cadena=cadena.concat("\n" +lista1[i].toString());
+           } 
+        }
+        return cadena;
+    }
+   
+   
+   
     
 }

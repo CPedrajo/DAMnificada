@@ -17,10 +17,10 @@ public class EnPromocion extends Articulo {
     }
 
     @Override
-    public void datos() {
-        super.datos(); 
-        System.out.println("EL precio con descuento es: "+(precio-descuento));
+    public String toString() {
+        return super.toString().concat(String.format("Descuento final \n", descuento, super.precio-super.precio*descuento/100));
     }
+
     
     
         
