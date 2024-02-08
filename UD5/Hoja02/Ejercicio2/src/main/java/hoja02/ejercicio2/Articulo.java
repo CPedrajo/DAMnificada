@@ -23,11 +23,11 @@ public class Articulo {
 
      @Override
     public String toString() {
-        return String.format("Articulo: %s Descripcion: %s Precio: %,.2f€", codigo, descripcion, precio);
+        return String.format("Articulo: %s Descripcion: %s Precio: %,.2f€ ", codigo, descripcion, precio);
     }
     
     public static String enProm (Articulo[] lista1){
-        String cadena= "Articulos en promocion";
+        String cadena= "\nArticulos en promocion: \n\t";
         for (int i=0; i<lista1.length; i++){
            if (lista1[i]instanceof EnPromocion){
                cadena=cadena.concat("\n" +lista1[i].toString());

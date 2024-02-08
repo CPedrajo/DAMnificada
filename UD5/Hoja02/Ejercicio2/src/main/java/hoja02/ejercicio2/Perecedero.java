@@ -11,7 +11,8 @@ import java.time.LocalDate;
  * @author carmen
  */
 public class Perecedero extends Articulo {
-    private static int mes, año; 
+
+    private int mes, año;
 
     public Perecedero(int mes, int año, int codigo, double precio, String descripcion) {
         super(codigo, precio, descripcion);
@@ -26,31 +27,25 @@ public class Perecedero extends Articulo {
     public int getAño() {
         return año;
     }
-    
 
-       @Override
+    @Override
     public String toString() {
         return super.toString().concat(String.format("Fecha De Caducidad: %d-%d\n", mes, año));
     }
-    
-    public static void caducados(Articulo[] cad){
-        
-        for (int i=0; i<cad.length;i++){
-            if(cad[i] instanceof Perecedero &&(año<LocalDate.now().getYear() || (año==LocalDate.now().getYear()&& mes<LocalDate.now().getMonthValue()))){
-            
-                System.out.println(cad[i].toString());
-            
-                    }
+
+    public static void caducados(Articulo[] cad) {
+
+        for (int i = 0; i < cad.length; i++) {
+            if (cad[i] instanceof Perecedero per) {//si el array [i] es del tipo indicado (perecederos), crea el objeto per del tipo indicado (perecedero)
+                // Perecedero per = (Perecedero) array [i]; 
+                // da igual hacerlo en articulos o perecederos porque es estatico y solo trabaja con lo que le pasas. 
+                if (per.getAño() < LocalDate.now().getYear() || (per.getAño() == LocalDate.now().getYear() && per.getMes() < LocalDate.now().getMonthValue())) {
+
+                    System.out.println("Los articulos caducados son: \nEl codigo es: "+cad[i].codigo+" La descripcion es: "+cad[i].descripcion);
+
+                }
+            }
+
         }
-        
     }
-
-    
-
-   
-        
-        
-       
-    
-    
 }
