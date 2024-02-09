@@ -25,6 +25,7 @@ public class Ejercicio4 {
             int pin=new Scanner (System.in).nextInt();
             if (pin==c){
                 System.out.println("La caja fuerte se ha abierto satisfactoriamente. ");
+                y=intentos;
                 
             }else{ 
                 System.out.println("Lo siento, esa no es la combinacion le quedan "+(intentos-y)+" intentos");
