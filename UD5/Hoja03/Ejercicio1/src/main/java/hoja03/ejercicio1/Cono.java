@@ -8,6 +8,18 @@ package hoja03.ejercicio1;
  *
  * @author DAM112
  */
-public class Cono {
+public class Cono extends Figura {
+    
+    public Cono (int radio, int altura){
+        super (radio, altura); 
+    }
+
+    @Override
+    public double area() {
+        }
+
+    @Override
+    public double volumen() {
+        }
     
 }
