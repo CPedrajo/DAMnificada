@@ -10,7 +10,7 @@ package hoja02.ejercicio3;
  */
 public abstract class Forma {
 
-    String id;
+    protected String id;
     @Override
     public abstract String toString(); 
     
