@@ -36,11 +36,17 @@ public class Libro extends Publicacion {
 
     }
     public static void librolargo(Publicacion []lista){
+       Libro aux; 
+        System.out.println("Libros mas largos de este mes: ");
         for (int i=0;i<lista.length;i++){
-            if (lista[i]instanceof Libro aux){
+            if (lista[i]instanceof Libro){
                 aux=(Libro) lista[i];
-                if(aux.fecha.getYear()==LocalDate.now().getYear()&& aux.fecha.getMonthValue()==LocalDate.now().getMonthValue()&& aux.numPaginas>1000){
-                    System.out.println(aux.toString());   
+               
+                if(aux.fecha.getYear()==LocalDate.now().getYear()&& aux.fecha.getMonthValue()==LocalDate.now().getMonthValue()){
+                    if( aux.numPaginas>1000){
+                       System.out.println(aux.toString()); 
+                    }
+                    
                 }
             }
         }

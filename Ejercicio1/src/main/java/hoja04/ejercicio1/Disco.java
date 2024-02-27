@@ -45,6 +45,9 @@ public class Disco extends Publicacion {
         for (int i= 0;i<lista.length;i++){
             if (lista[i]instanceof Disco){
                 aux=(Disco)lista[i]; 
+                if (max==null){
+                    max=aux;
+                }
                 if (aux.duracionMinutos>max.duracionMinutos){
                     max=aux;
                 }
